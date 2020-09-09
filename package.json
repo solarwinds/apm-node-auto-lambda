@@ -1,0 +1,25 @@
+{
+  "name": "appoptics-auto-lambda",
+  "version": "1.0.0",
+  "description": "auto instrumentation for lambda functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appoptics/apm-node-auto-lambda.git"
+  },
+  "keywords": [
+    "lambda",
+    "apm",
+    "automatic",
+    "nodejs"
+  ],
+  "author": "Bruce A. MacNaughton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/appoptics/apm-node-auto-lambda/issues"
+  },
+  "homepage": "https://github.com/appoptics/appoptics-apm-node-auto-lambda#readme"
+}
