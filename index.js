@@ -16,7 +16,7 @@ try {
   userHandler = load(taskRoot, handler);
 } catch (e) {
   // eslint-disable-next-line no-console
-  console.error(`failed to load ${handler}`);
+  console.error('failed to load APPOPTICS_WRAP_LAMBDA_HANDLER:', e);
 }
 
 // only load our agent code if not disabled and the user handler
