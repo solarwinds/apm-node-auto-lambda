@@ -1,6 +1,6 @@
 {
   "name": "appoptics-auto-lambda",
-  "version": "1.0.1-l1",
+  "version": "1.0.1-lambda-1",
   "description": "auto instrumentation for lambda functions",
   "main": "index.js",
   "scripts": {
