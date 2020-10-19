@@ -2,7 +2,7 @@
   "name": "appoptics-auto-lambda",
   "version": "1.0.1",
   "appoptics": {
-    "version-suffix": "lambda-2"
+    "version-suffix": "lambda-3"
   },
   "description": "auto instrumentation for lambda functions",
   "main": "index.js",

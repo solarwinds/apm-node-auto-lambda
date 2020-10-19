@@ -14,22 +14,21 @@ try {
   // use the lambda runtime's loader logic.
   const {load} = require(runtime);
   userHandler = load(taskRoot, handler);
+  // only load our agent code if not disabled and the user handler
+  // was loaded.
+  if (enabled && userHandler) {
+    const ao = require(apm);
+
+    // if nothing caused the agent to be disabled then
+    // wrap the user's handler.
+    if (ao.cfg.enabled) {
+      userHandler = ao.wrapLambdaHandler(userHandler);
+      ao.loggers.debug(`wrapped ${taskRoot} ${handler}`);
+    }
+  }
 } catch (e) {
   // eslint-disable-next-line no-console
   console.error('failed to load APPOPTICS_WRAP_LAMBDA_HANDLER:', e);
-}
-
-// only load our agent code if not disabled and the user handler
-// was loaded.
-if (enabled && userHandler) {
-  const ao = require(apm);
-
-  // if nothing caused the agent to be disabled then
-  // wrap the user's handler.
-  if (ao.cfg.enabled) {
-    userHandler = ao.wrapLambdaHandler(userHandler);
-    ao.loggers.debug(`wrapped ${taskRoot} ${handler}`);
-  }
 }
 
 module.exports = {
