@@ -20,7 +20,7 @@
     "nodejs"
   ],
   "author": "Bruce A. MacNaughton",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/appoptics/apm-node-auto-lambda/issues"
   },
